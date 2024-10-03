@@ -1,0 +1,34 @@
+<view class="my">
+  <view class="avatar-info">
+    <view class="info-box" bind:tap="tapInfo">
+      <view class="avatar">
+        <image src="/static/image/maozhua.png" style="width: 80rpx;height: 80rpx;" mode="widthFix" />
+      </view>
+      <view class="name">{{ info.name || '点击登录' }}</view>
+    </view>
+  </view>
+  <view class="info {{ openid ? '' : 'hide' }}">
+    <view class="info-item {{ info.sex ? '' : 'hide' }}" style="border-bottom: {{ info.birthday || info.hobby ? '2rpx solid #ccc' : 'none' }};">
+      <view class="label">性别</view>
+      <view class="value">{{ info.sex == 0 ? '男' : '女' }}</view>
+    </view>
+    <view class="info-item {{ info.birthday ? '' : 'hide' }}" style="border-bottom: {{ info.hobby ? '2rpx solid #ccc' : 'none' }};">
+      <view class="label">生日</view>
+      <view class="value">{{ info.birthday }}</view>
+    </view>
+    <view class="info-item {{ info.hobby ? '' : 'hide' }}" style="border: none;">
+      <view class="label">喜欢的宠物类型</view>
+      <view class="item-icon">
+        <image class="icon" wx:for="{{ hobby_list }}" wx:key="item" src="{{ item }}" mode="widthFix" style="width: 60rpx;" />
+      </view>
+    </view>
+  </view>
+  <view class="btn-list">
+    <view class="btn music-btn {{ openid ? 'left' : '' }}" bind:tap="onMusic">
+      {{ isPlay ? '暂停音乐' : '播放音乐'  }}
+    </view>
+    <view class="btn {{ openid ? 'right' : 'hide' }}" bind:tap="logout">
+      退出登录
+    </view>
+  </view>
+</view>

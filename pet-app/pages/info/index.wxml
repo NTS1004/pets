@@ -1,0 +1,43 @@
+<view class="containers">
+  <view class="avatar-info">
+    <view>
+      <button class="avatar-wrapper" style="width: 152rpx;">
+        <view class="avatar">
+          <image src="/static/image/pink-maozhua.png" style="width: 80rpx;height: 80rpx;" mode="widthFix" />
+        </view>
+      </button>
+    </view>
+    <view class="name">{{ info.name }}</view>
+  </view>
+  <view class="info">
+    <view class="info-item">
+      <view class="label">昵称</view>
+      <input value="{{ info.name }}" maxlength="6" class="input" type="text" placeholder="请输入姓名" placeholder-class="placeholder" bindchange="inputName" />
+    </view>
+    <view class="info-item">
+      <view class="label">性别</view>
+      <radio-group bindchange="selectSex">
+        <radio color="#fac3b6" checked="{{ info.sex == 0 }}" value="0" class="select">男</radio>
+        <radio color="#fac3b6" checked="{{ info.sex == 1 }}" value="1" class="select">女</radio>
+      </radio-group>
+    </view>
+    <view class="info-item">
+      <view class="label">生日</view>
+      <picker mode="date" color="#fac3b6" bindchange="selectDate">
+        <view class="tip">
+          <view class="{{ info.birthday ? 'birthday' : '' }}">{{ info.birthday || '请选择日期' }}</view>
+          <image src="/static/image/down-row{{ info.birthday ? '-active' : '' }}.png" mode="widthFix" style="width: 26rpx;margin-left: 10rpx;" />
+        </view>
+      </picker>
+    </view>
+    <view class="info-item" style="border: none;">
+      <view class="label">喜欢的宠物类型</view>
+      <checkbox-group color="#fac3b6" bindchange="selectHobby">
+        <checkbox wx:for="{{ cate_list }}" wx:for-index="index" wx:key="index" class="select" color="#fac3b6" checked="{{ item.checked }}" value="{{ item.image }}">{{ item.cate_name }}</checkbox>
+      </checkbox-group>
+    </view>
+  </view>
+  <view class="btn" bind:tap="saveInfo">
+    保存
+  </view>
+</view>

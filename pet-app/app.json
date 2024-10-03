@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/collection/index",
+    "pages/my/index",
+    "pages/pets-list/index",
+    "pages/pet-details/index",
+    "pages/info/index",
+    "pages/login/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "好宠",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "selectedColor": "#fac3b6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/image/tabList/shouye.png",
+        "selectedIconPath": "/static/image/tabList/active-shouye.png",
+        "iconSize": 10,
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/collection/index",
+        "iconPath": "/static/image/tabList/shoucang.png",
+        "selectedIconPath": "/static/image/tabList/active-shoucang.png",
+        "text": "收藏"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "/static/image/tabList/yonghu.png",
+        "selectedIconPath": "/static/image/tabList/active-yonghu.png",
+        "text": "我"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

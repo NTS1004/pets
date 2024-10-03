@@ -1,0 +1,23 @@
+<view class="pets">
+  <view class="cate-tab">
+    <view class="tab-item item-{{ item.id }} {{ active_cate == item.id ? 'tab-item-active' : '' }}" wx:for="{{ cate_list }}" wx:for-index="index" wx:key="id" data-cate_id="{{ item.id }}" bind:tap="selectCate">
+      <image class="cate-image" src="{{ item.image }}" />
+      <text>{{ item.cate_name }}</text>
+    </view>
+    <view class="active-bar {{ barLeft > 0 ? 'bar-show' : ''  }}" style="left: {{ barLeft +  'px' }}"></view>
+  </view>
+  <scroll-view class="scroll" scroll-y="true" bindscrolltolower="scrolltolower">
+    <view class="pet-list">
+      <view class="pet-item {{ index % 2 == 0 ? 'pet-left' : 'pet-right' }}" wx:for="{{ pet_list }}" wx:key="id" data-id="{{ item.id }}" bind:tap="toDetails">
+        <image class="pet-image" style="width: 100%;" src="{{ item.images[0] }}" show-menu-by-longpress />
+        <view class="pet-name">{{ item.pet_name }}</view>
+      </view>
+      <view class="pet-item pet-right" style="background: none;"></view>
+    </view>
+    <view class="empty" wx:if="{{ !pet_list.length }}">
+      <image src="/static/image/empty.png" mode="widthFix" style="width: 276rpx;" />
+      <view class="text">暂无数据</view>
+    </view>
+  </scroll-view>
+  <view class="footer"></view>
+</view>

@@ -1,0 +1,83 @@
+.body {
+  position: relative;
+}
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav image {
+  width: 42rpx;
+  margin-left: 8rpx;
+}
+
+.swiper {
+  height: 1000rpx;
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+.tab-list {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 34rpx;
+}
+
+.tab-item {
+  margin-right: 24rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.tab-item-active {
+  color: #fac3b6;
+  font-size: 32rpx;
+}
+
+.video {
+  width: 100%;
+  margin-top: 24rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  background: #fff;
+  width: 100%;
+  display: flex;
+}
+
+.footer-body {
+  height: 120rpx;
+  padding: 0 24rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pet-name {
+  font-size: 36rpx;
+}
+
+.btn {
+  /* width: 100rpx; */
+  background: #fac3b6;
+  color: #fff;
+  font-size: 28rpx;
+  width: 180rpx;
+  display: flex;
+  justify-content: center;
+  height: 66rpx;
+  align-items: center;
+  border-radius: 6rpx;
+}

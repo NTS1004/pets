@@ -1,0 +1,101 @@
+.my {
+  height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  flex-flow: column;
+}
+
+.avatar-info {
+  background: #fff;
+  width: 100%;
+  height: 290rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: 24rpx 0;
+}
+
+
+.info-box {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.avatar {
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 50%;
+  background: #fac3b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 28rpx;
+  margin-top: 22rpx;
+}
+
+
+.info {
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+  margin-bottom: 24rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22rpx 28rpx;
+  border-bottom: 2rpx solid #ccc;
+  font-size: 28rpx;
+}
+
+.item-icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 16rpx;
+}
+
+.btn-list {
+  display: flex;
+  margin: 0rpx 24rpx 0 24rpx;
+
+}
+
+.btn {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22rpx 0rpx;
+  border-radius: 8rpx;
+  color: #fff;
+  background: #fac3b6;
+  flex: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.music-btn {
+  background: #fff;
+  color: #000;
+}
+
+.left {
+  margin-right: 10rpx;
+}
+
+.right {
+  margin-left: 10rpx;
+}

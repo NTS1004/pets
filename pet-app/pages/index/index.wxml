@@ -1,0 +1,19 @@
+<view class="scroll">
+  <swiper wx:if="{{ swiper_list.length }}" class="swiper" indicator-dots autoplay circular indicator-active-color="#fac3b6">
+    <swiper-item class="swiper-item" wx:for="{{ swiper_list }}" wx:key="id" capture-bind:longpress="longTap">
+      <image src="{{ item.image }}" mode="heightFix" show-menu-by-longpress />
+    </swiper-item>
+  </swiper>
+  <view class="cate">
+    <view class="cate-item" wx:for="{{ cate_list }}" wx:key="id" data-cate_id="{{ item.id }}" bind:tap="selectCate">
+      <image class="cate-image" src="{{ item.image }}" />
+      <view class="cate-name">{{ item.cate_name }}</view>
+    </view>
+  </view>
+  <view class="title">热门推荐</view>
+  <view class="recommend">
+    <view class="recommend-item" wx:for="{{ recommend_list }}" wx:key="id" data-pet_id="{{ item.pet_id }}" bind:tap="toPetDetails">
+      <image class="recommend-image" src="{{ item.image }}" mode="widthFix" show-menu-by-longpress />
+    </view>
+  </view>
+</view>

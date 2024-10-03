@@ -1,0 +1,13 @@
+<scroll-view class="scroll {{ list.length ?  'scroll-list' : ''}}" scroll-y="true"  bindscrolltolower="scrolltolower">
+  <view class="pet-list">
+    <view class="pet-item {{ index % 2 == 0 ? 'pet-left' : 'pet-right' }}" wx:for="{{ list }}" wx:key="id" data-id="{{ item.pet_id }}" bind:tap="toDetails">
+      <image class="pet-image" src="{{ item.images[0] }}" style="width: 100%;" show-menu-by-longpress />
+      <view class="pet-name">{{ item.pet_name }}</view>
+    </view>
+    <view class="pet-item pet-right" style="background: none;"></view>
+  </view>
+  <view class="empty" wx:if="{{ !list.length }}">
+    <image src="/static/image/empty.png" mode="widthFix" style="width: 276rpx;" />
+    <view class="text">暂无数据</view>
+  </view>
+</scroll-view>

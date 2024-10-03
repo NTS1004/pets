@@ -1,0 +1,113 @@
+.pets {
+  height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  flex-flow: column;
+}
+
+.cate-tab {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 20rpx;
+}
+
+.tab-item {
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  height: 80rpx;
+}
+
+.tab-item-active {
+  color:#fac3b6;
+}
+
+.cate-image {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 12rpx;
+}
+
+.active-bar {
+  position: absolute;
+  width: 88rpx;
+  height: 8rpx;
+  border-radius: 8rpx;
+  bottom: 18rpx;
+  background: #fac3b6;
+  transition: .3s all;
+  display: none;
+}
+
+.bar-show {
+  display: block;
+}
+
+.scroll {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.pet-list {
+  display: flex;
+  margin: 0 10rpx;
+  flex-wrap: wrap;
+}
+
+.pet-item {
+  flex: 1;
+  background: #fff;
+  border-radius: 16rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  min-width: 47%;
+  margin-bottom: 12rpx;
+}
+
+.pet-image {
+  border-radius: 8rpx;
+}
+
+.pet-name {
+  font-size: 28rpx;
+  margin: 16rpx 0 20rpx 0;
+}
+
+.pet-left {
+  margin-right: 6rpx;
+}
+
+.pet-right {
+  margin-left: 6rpx;
+}
+
+.empty {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  margin-top: 36rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.footer {
+  width: 100%;
+  height: calc(env(safe-area-inset-bottom));
+  background: #fff;
+}

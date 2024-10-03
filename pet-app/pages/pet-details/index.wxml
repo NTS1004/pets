@@ -1,0 +1,28 @@
+<scroll-view scroll-y="true" style="background: #f5f5f5; height: 100vh;">
+  <view class="body">
+    <view class="nav" style="{{ nav_style }}">
+      <image src="/static/image/left-row-1.png" mode="widthFix" bind:tap="toBack" />
+      <!-- <view class="tab-list">
+        <view class="tab-item {{ index == current ? 'tab-item-active' : '' }}" wx:for="{{ tabList }}" wx:key="index" wx:for-index="index" data-index="{{ index }}" bind:tap="selectTab"> {{ item }} </view>
+      </view> -->
+    </view>
+    <swiper class="swiper" current="{{ current }}">
+      <swiper-item>
+        <swiper class="swiper" autoplay circular interval="4000">
+          <swiper-item class="swiper-item" wx:for="{{ details.images }}" wx:for-index="index" wx:key="index" data-image="{{ item }}">
+            <image class="swiper-image" src="{{ item }}" mode="widthFix" show-menu-by-longpress style="width: 100%;"/>
+          </swiper-item>
+        </swiper>
+      </swiper-item>
+      <swiper-item></swiper-item>
+    </swiper>
+    <video wx:if="{{ details.video }}" autoplay loop show-mute-btn muted src="{{ details.video }}" class="video" />
+    <view style="height: 206rpx"></view>
+  </view>
+  <view class="footer">
+    <view class="footer-body">
+      <view class="pet-name">{{ details.pet_name }}</view>
+      <view class="btn" bind:tap="changeCollection">{{ isCollection ? '取消收藏' : '加入收藏' }}</view>
+    </view>
+  </view>
+</scroll-view>

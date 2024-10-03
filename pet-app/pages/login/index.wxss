@@ -1,0 +1,25 @@
+.login {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  border-radius: 8rpx;
+  margin-top: 52rpx;
+}
+
+.btn {
+  background: #fac3b6;
+  color: #fff;
+  margin: 0 24rpx;
+  width: 640rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60rpx;
+  padding: 22rpx 0;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+}

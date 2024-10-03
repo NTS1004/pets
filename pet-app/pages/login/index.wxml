@@ -1,0 +1,4 @@
+<view class="login">
+  <image class="logo" src="/static/image/login.png" mode="widthFix" />
+  <view class="btn" bind:tap="login">一键登录</view>
+</view>
